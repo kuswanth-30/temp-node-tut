@@ -14,6 +14,9 @@ http
         const fileStream = fs.createReadStream('./content/big.txt','utf8');
         fileStream.on('open',()=>{
             fileStream.pipe(res)
+            
+            /* pushes from readStream to 
+              writeStream*/
         })
         fileStream.on('error',(err)=>{
             res.end(err)
